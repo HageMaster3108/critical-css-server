@@ -5,5 +5,5 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export PORT=5001
 export REDIS_URL=redis://redis
 export
-yarn install
+#yarn install
 exec "$@"
