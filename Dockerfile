@@ -33,3 +33,5 @@ COPY ./docker-entrypoint.sh /
 RUN yarn install
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["npm start"]
