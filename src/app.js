@@ -28,6 +28,10 @@ function prepareApp(config) {
 
   app.use(bodyParser.json());
 
+  app.get('/', function (req, res) { res.send('This is the critical-css server. Please send API requests to /api/v1/css'); });
+  
+  app.use(express.static('/static'));
+
   app.post(
     '/api/v1/css',
     requireHeader('Content-Type', 'application/json'),

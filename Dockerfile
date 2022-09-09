@@ -27,10 +27,16 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 #ENV PUPPETEER_EXECUTABLE_PATH which chromium`
 
 
-COPY ./docker-entrypoint.sh /
+
 #COPY ./ /app_home
 
 RUN yarn install
+
+RUN mkdir /static
+COPY testpage* /static
+
+COPY ./docker-entrypoint.sh /
+COPY ./probe.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
