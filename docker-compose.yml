@@ -7,7 +7,7 @@ services:
     command: redis-server --save "" --appendonly no
   critical-css:
     build: .
-    command: npm start
+    #command: npm start
     ports:
       - '5001:5001'
     depends_on:

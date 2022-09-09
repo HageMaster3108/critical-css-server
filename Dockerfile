@@ -40,4 +40,4 @@ COPY ./probe.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["npm start"]
+CMD ["npm", "start"]
